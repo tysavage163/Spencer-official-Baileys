@@ -1,10 +1,10 @@
 {
   "name": "spencer-baileys",
-  "version": "1.0.0",
-  "description": "Spencer Official Baileys — custom fork with native Group Status support",
+  "version": "1.0.4",
+  "description": "WebSocket-based JavaScript library for interacting with the WhatsApp Web API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "homepage": "https://github.com/testsbot949-byaaatch/Spencer-Official-Baileys-#readme",
+  "homepage": "https://github.com/tysavage163/Spencer-official-Baileys#readme",
   "author": "Spencer",
   "license": "MIT",
   "keywords": [
@@ -29,15 +29,11 @@
     "protobufjs": "^7.2.4",
     "ws": "^8.13.0"
   },
-  "contributors": [
-    "Maurice Gift (spencer-baileys original author)",
-    "WhiskeySockets Team (upstream Baileys)"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/testsbot949-byaaatch/Spencer-Official-Baileys-.git"
+    "url": "https://github.com/tysavage163/Spencer-official-Baileys.git"
   },
   "bugs": {
-    "url": "https://github.com/testsbot949-byaaatch/Spencer-Official-Baileys-/issues"
+    "url": "https://github.com/tysavage163/Spencer-official-Baileys/issues"
   }
 }
