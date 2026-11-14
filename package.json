@@ -1,6 +1,6 @@
 {
   "name": "spencer-baileys",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "WebSocket-based JavaScript library for interacting with the WhatsApp Web API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
