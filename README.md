@@ -1,55 +1,159 @@
-<div align="center">
-  <h1>Spencer-Baileys</h1>
-  <p>A WebSocket-based JavaScript library for interacting with the WhatsApp Web API</p>
-  
-  [![npm version](https://img.shields.io/npm/v/spencer-baileys.svg)](https://www.npmjs.com/package/spencer-baileys)
-  [![npm downloads](https://img.shields.io/npm/dm/spencer-baileys.svg)](https://www.npmjs.com/package/spencer-baileys)
-  [![License](https://img.shields.io/npm/l/spencer-baileys.svg)](https://github.com/mauricegift/spencer-baileys/blob/main/LICENSE)
-</div>
+🧠 SPENCER BRAINCORE
 
-## Disclaimer
+An Advanced WhatsApp Web Library
 
-This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or affiliates. Use at your own discretion. Do not spam people with this. We discourage any stalkerware, bulk or automated messaging usage.
+Built by Spencer. Engineered by Savage Tech.
 
-## Installation
+Spencer Braincore is a WhatsApp Web library designed for developers building sophisticated WhatsApp automation systems, intelligent assistants and multi-device applications.
 
-```bash
-npm install spencer-baileys
-```
+Combining session management, messaging capabilities, event handling and extensible socket functionality, Spencer Braincore provides a foundation for powerful WhatsApp integrations.
 
-Or using yarn:
-```bash
-yarn add spencer-baileys
-```
+---
 
-## Quick Start
+⚡ CORE IDENTITY
 
-### CommonJS (Recommended)
-```javascript
-const { default: makeWASocket, useMultiFileAuthState, Browsers } = require('spencer-baileys')
-```
+Property| Information
+Package| Spencer Braincore
+npm| "spencer-braincore"
+Runtime| Node.js
+Platform| WhatsApp
+Architecture| Multi-device
+Category| WhatsApp Automation Library
+Developer| Spencer
+Organization| Savage Tech
+License| See LICENSE
 
-### ES Modules / TypeScript
-```javascript
-import pkg from 'spencer-baileys'
-const { default: makeWASocket, useMultiFileAuthState, Browsers } = pkg
-```
+---
 
-## Features
+🚀 FEATURES
 
-- Full WhatsApp Web API support
-- Multi-device support with QR code and pairing code authentication
-- LID (Link ID) addressing support for both personal chats and groups
-- Group status/story sending functionality
-- Session management and restoration
-- Message sending, receiving, and manipulation
-- Group management
-- Privacy settings
-- Profile management
-- And much more!
+- Multi-device WhatsApp connectivity.
+- QR code authentication.
+- Pairing-code authentication.
+- Message sending and receiving.
+- Media handling.
+- Group management.
+- Newsletter and channel integrations.
+- Message event listeners.
+- Contact management.
+- Session management.
+- Socket-based architecture.
+- Extensible event system.
+- Developer-friendly API.
 
+---
 
-## Documentation
+🧠 COMMUNITY INTEGRATION
 
-See the source and examples in this repository.
+Spencer Braincore supports an optional community integration concept designed to connect WhatsApp bot administrators.
 
+The objective is to establish a central support community where developers can receive updates, announcements, troubleshooting assistance and technical support.
+
+Community functionality
+
+Administrators can configure:
+
+- Official support group invitation.
+- Official announcement channel.
+- Community notification settings.
+- Community integration preferences.
+
+Automatic community discovery
+
+The integration can retrieve administrator-configured group and channel invitation information.
+
+Transparency and authorization:
+
+Community onboarding must be transparent and authorized.
+
+Users should be informed before their WhatsApp accounts are used to join groups or follow channels.
+
+Community integration must provide clear configuration and opt-out controls.
+
+---
+
+🔐 SECURITY & PRIVACY
+
+Savage Tech believes automation should be powerful, transparent and controllable.
+
+Our development principles include:
+
+1. Transparent background operations.
+2. Authorized group participation.
+3. Authorized channel following.
+4. No undisclosed credential collection.
+5. No unauthorized session sharing.
+6. Clearly documented remote integrations.
+7. Administrator-controlled configurations.
+
+Developers should inspect package updates and dependencies before deploying them in production.
+
+---
+
+📦 INSTALLATION
+
+npm install spencer-braincore
+
+Import
+
+const {
+    default: makeWASocket,
+    useMultiFileAuthState
+} = require('spencer-braincore');
+
+Verify the available exports against the installed package version.
+
+---
+
+🛠️ REQUIREMENTS
+
+- Node.js
+- npm
+- Internet connectivity
+- WhatsApp account
+- Compatible authentication environment
+
+---
+
+🧩 BUILT FOR DEVELOPERS
+
+Spencer Braincore is designed for:
+
+- WhatsApp bot developers.
+- Automation engineers.
+- Multi-device application developers.
+- WhatsApp integration projects.
+- Community management systems.
+- Experimental messaging applications.
+
+---
+
+📢 OUR PHILOSOPHY
+
+Automation should simplify development, strengthen communities and empower developers.
+
+We believe in building technology that is reliable, transparent and accessible.
+
+Every feature should have a purpose. Every automated action should respect user authorization.
+
+---
+
+👨‍💻 DEVELOPMENT & OWNERSHIP
+
+Created by Spencer
+
+Developed under Savage Tech.
+
+Forged from logic.
+Engineered with precision.
+Powered by innovation.
+
+🧠 SPENCER BRAINCORE
+
+Where intelligence meets automation.
+
+---
+
+SAVAGE TECH
+
+© 2026 Savage Tech. All rights reserved.
