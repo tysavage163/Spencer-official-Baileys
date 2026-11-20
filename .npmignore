@@ -1,0 +1,9 @@
+*.bak
+*.bak.*
+*.orig
+*.swp
+*.tmp
+test.js
+test-toggle.js
+.git/
+.github/

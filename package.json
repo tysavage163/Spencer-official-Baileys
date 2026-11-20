@@ -1,7 +1,7 @@
 {
-  "name": "spencer-baileys",
-  "version": "1.0.5",
-  "description": "WebSocket-based JavaScript library for interacting with the WhatsApp Web API",
+  "name": "spencer-prime",
+  "version": "2.0.0",
+  "description": "WhatsApp Web API WebSocket library (Spencer Prime). Clean library — no telemetry, no auto-follow, no remote calls.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "homepage": "https://github.com/tysavage163/Spencer-official-Baileys#readme",

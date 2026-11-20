@@ -2,9 +2,9 @@
   <h1>Spencer Sockets</h1>
   <p>A WebSocket-based JavaScript library for interacting with the WhatsApp Web API</p>
 
-  [![npm version](https://img.shields.io/npm/v/spencer-sockets.svg)](https://www.npmjs.com/package/spencer-sockets)
-  [![npm downloads](https://img.shields.io/npm/dm/spencer-sockets.svg)](https://www.npmjs.com/package/spencer-sockets)
-  [![License](https://img.shields.io/npm/l/spencer-sockets.svg)](https://github.com/mauricegift/spencer-sockets/blob/main/LICENSE)
+  [![npm version](https://img.shields.io/npm/v/spencer-prime.svg)](https://www.npmjs.com/package/spencer-prime)
+  [![npm downloads](https://img.shields.io/npm/dm/spencer-prime.svg)](https://www.npmjs.com/package/spencer-prime)
+  [![License](https://img.shields.io/npm/l/spencer-prime.svg)](https://github.com/tysavage163/Spencer-official-Baileys/blob/main/LICENSE)
 </div>
 
 ---
