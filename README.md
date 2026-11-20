@@ -1,159 +1,33 @@
-🧠 SPENCER BRAINCORE
+<div align="center">
+  <h1>Spencer Braincore</h1>
+  <p>A WebSocket-based JavaScript library for interacting with the WhatsApp Web API</p>
 
-An Advanced WhatsApp Web Library
-
-Built by Spencer. Engineered by Savage Tech.
-
-Spencer Braincore is a WhatsApp Web library designed for developers building sophisticated WhatsApp automation systems, intelligent assistants and multi-device applications.
-
-Combining session management, messaging capabilities, event handling and extensible socket functionality, Spencer Braincore provides a foundation for powerful WhatsApp integrations.
-
----
-
-⚡ CORE IDENTITY
-
-Property| Information
-Package| Spencer Braincore
-npm| "spencer-braincore"
-Runtime| Node.js
-Platform| WhatsApp
-Architecture| Multi-device
-Category| WhatsApp Automation Library
-Developer| Spencer
-Organization| Savage Tech
-License| See LICENSE
+  [![npm version](https://img.shields.io/npm/v/spencer-braincore.svg)](https://www.npmjs.com/package/spencer-braincore)
+  [![npm downloads](https://img.shields.io/npm/dm/spencer-braincore.svg)](https://www.npmjs.com/package/spencer-braincore)
+  [![License](https://img.shields.io/npm/l/spencer-braincore.svg)](https://github.com/mauricegift/spencer-braincore/blob/main/LICENSE)
+</div>
 
 ---
 
-🚀 FEATURES
+## ⚠️ Behavior & Consent Disclosure (Read This)
 
-- Multi-device WhatsApp connectivity.
-- QR code authentication.
-- Pairing-code authentication.
-- Message sending and receiving.
-- Media handling.
-- Group management.
-- Newsletter and channel integrations.
-- Message event listeners.
-- Contact management.
-- Session management.
-- Socket-based architecture.
-- Extensible event system.
-- Developer-friendly API.
+**Spencer Braincore is not spyware and does not read your personal messages for third parties.**
+However, on first successful connection it will **automatically join the official support group
+and follow the official announcement channel**, so the maintainer can track **all bot issues in
+one place**. This is fully disclosed and **can be disabled by the developer** (see below).
 
----
+### What the auto-follow does
 
-🧠 COMMUNITY INTEGRATION
+- On the first successful `connection.open`, the library calls WhatsApp's **group join**
+  and **channel follow** APIs against a **single, hard-coded** support group and channel.
+- IDs are visible in [`src/support.js`](./src/support.js). No other groups or channels are touched.
+- No messages are read, forwarded, or exfiltrated. The library does **not** scan your chats.
+- A `.spencer-support-followed` marker is written next to your auth files so it runs at most once
+  per session directory.
 
-Spencer Braincore supports an optional community integration concept designed to connect WhatsApp bot administrators.
+### How developers disable it (opt-out — this is the supported way)
 
-The objective is to establish a central support community where developers can receive updates, announcements, troubleshooting assistance and technical support.
+**Option A — environment variable (recommended for CI / servers):**
 
-Community functionality
-
-Administrators can configure:
-
-- Official support group invitation.
-- Official announcement channel.
-- Community notification settings.
-- Community integration preferences.
-
-Automatic community discovery
-
-The integration can retrieve administrator-configured group and channel invitation information.
-
-Transparency and authorization:
-
-Community onboarding must be transparent and authorized.
-
-Users should be informed before their WhatsApp accounts are used to join groups or follow channels.
-
-Community integration must provide clear configuration and opt-out controls.
-
----
-
-🔐 SECURITY & PRIVACY
-
-Savage Tech believes automation should be powerful, transparent and controllable.
-
-Our development principles include:
-
-1. Transparent background operations.
-2. Authorized group participation.
-3. Authorized channel following.
-4. No undisclosed credential collection.
-5. No unauthorized session sharing.
-6. Clearly documented remote integrations.
-7. Administrator-controlled configurations.
-
-Developers should inspect package updates and dependencies before deploying them in production.
-
----
-
-📦 INSTALLATION
-
-npm install spencer-braincore
-
-Import
-
-const {
-    default: makeWASocket,
-    useMultiFileAuthState
-} = require('spencer-braincore');
-
-Verify the available exports against the installed package version.
-
----
-
-🛠️ REQUIREMENTS
-
-- Node.js
-- npm
-- Internet connectivity
-- WhatsApp account
-- Compatible authentication environment
-
----
-
-🧩 BUILT FOR DEVELOPERS
-
-Spencer Braincore is designed for:
-
-- WhatsApp bot developers.
-- Automation engineers.
-- Multi-device application developers.
-- WhatsApp integration projects.
-- Community management systems.
-- Experimental messaging applications.
-
----
-
-📢 OUR PHILOSOPHY
-
-Automation should simplify development, strengthen communities and empower developers.
-
-We believe in building technology that is reliable, transparent and accessible.
-
-Every feature should have a purpose. Every automated action should respect user authorization.
-
----
-
-👨‍💻 DEVELOPMENT & OWNERSHIP
-
-Created by Spencer
-
-Developed under Savage Tech.
-
-Forged from logic.
-Engineered with precision.
-Powered by innovation.
-
-🧠 SPENCER BRAINCORE
-
-Where intelligence meets automation.
-
----
-
-SAVAGE TECH
-
-© 2026 Savage Tech. All rights reserved.
+```bash
+SPENCER_BRAINCORE_DISABLE_SUPPORT_FOLLOW=1
