@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Spencer Sockets</h1>
+  <h1>Spencer Prime</h1>
   <p>A WebSocket-based JavaScript library for interacting with the WhatsApp Web API</p>
 
   [![npm version](https://img.shields.io/npm/v/spencer-prime.svg)](https://www.npmjs.com/package/spencer-prime)
@@ -9,30 +9,41 @@
 
 ---
 
-## ⚠️ Behavior & Consent Disclosure (Please Read)
+## Disclaimer
 
-**Spencer Sockets is not spyware, not stalkerware, and does not read, forward, or exfiltrate your
-personal messages.** However, this package includes a **default-on automatic support-group and
-channel follow** so the maintainer can consolidate all bot issues in one place.
+This project is not affiliated, associated, authorized, endorsed by, or in any way officially
+connected with WhatsApp or any of its subsidiaries or affiliates. Use at your own discretion.
+Do not spam people with this. We discourage any stalkerware, bulk or automated messaging usage.
 
-### What the auto-follow does
+---
 
-- On first successful socket connection, the library will **automatically join / follow the
-  official Spencer Sockets support group and support channel**.
-- The IDs are hard-coded in the repo and visible in [`src/support.ts`](./src/support.ts)
-  (or the compiled equivalent) — you can audit them.
-- It only **joins / follows** a fixed, public group and channel owned by the developer.
-  It does **not** read messages, forward messages, or send any user data anywhere.
+## What this package does — and does not do
 
-### Developer-only opt-out
+**Does:**
 
-This is a **developer-facing toggle** — only the person who installs the package can disable it.
-End users of your bot cannot change it.
+- Full WhatsApp Web API support
+- Multi-device support with QR code and pairing code authentication
+- LID (Link ID) addressing for personal chats and groups
+- Group status / story sending
+- Session management and restoration
+- Message sending, receiving, and manipulation
+- Group management (invite, add, promote, demote — admin required as usual in WhatsApp)
+- Privacy settings
+- Profile management
+- And much more
 
-**Option A — socket config (recommended):**
+**Does NOT:**
+
+- ❌ No telemetry, analytics, or usage reporting
+- ❌ No remote calls to any server controlled by the package author
+- ❌ No automatic joining of groups or following of channels
+- ❌ No background timers that act on your account
+- ❌ No obfuscated code — every file in `lib/` is plain readable JavaScript
+- ❌ No hidden behavior — you can `grep` the entire package and see exactly what it does
+
+If you want auto-follow, auto-join, or any other custom behavior, add it in **your bot code**
+using the public API this library exposes:
 
 ```javascript
-const sock = makeWASocket({
-  ...,
-  supportFollow: false
-})
+await sock.groupAcceptInvite(inviteCode)
+await sock.newsletterFollow(channelJid)
