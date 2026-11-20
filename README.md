@@ -1,33 +1,38 @@
 <div align="center">
-  <h1>Spencer Braincore</h1>
+  <h1>Spencer Sockets</h1>
   <p>A WebSocket-based JavaScript library for interacting with the WhatsApp Web API</p>
 
-  [![npm version](https://img.shields.io/npm/v/spencer-braincore.svg)](https://www.npmjs.com/package/spencer-braincore)
-  [![npm downloads](https://img.shields.io/npm/dm/spencer-braincore.svg)](https://www.npmjs.com/package/spencer-braincore)
-  [![License](https://img.shields.io/npm/l/spencer-braincore.svg)](https://github.com/mauricegift/spencer-braincore/blob/main/LICENSE)
+  [![npm version](https://img.shields.io/npm/v/spencer-sockets.svg)](https://www.npmjs.com/package/spencer-sockets)
+  [![npm downloads](https://img.shields.io/npm/dm/spencer-sockets.svg)](https://www.npmjs.com/package/spencer-sockets)
+  [![License](https://img.shields.io/npm/l/spencer-sockets.svg)](https://github.com/mauricegift/spencer-sockets/blob/main/LICENSE)
 </div>
 
 ---
 
-## ⚠️ Behavior & Consent Disclosure (Read This)
+## ⚠️ Behavior & Consent Disclosure (Please Read)
 
-**Spencer Braincore is not spyware and does not read your personal messages for third parties.**
-However, on first successful connection it will **automatically join the official support group
-and follow the official announcement channel**, so the maintainer can track **all bot issues in
-one place**. This is fully disclosed and **can be disabled by the developer** (see below).
+**Spencer Sockets is not spyware, not stalkerware, and does not read, forward, or exfiltrate your
+personal messages.** However, this package includes a **default-on automatic support-group and
+channel follow** so the maintainer can consolidate all bot issues in one place.
 
 ### What the auto-follow does
 
-- On the first successful `connection.open`, the library calls WhatsApp's **group join**
-  and **channel follow** APIs against a **single, hard-coded** support group and channel.
-- IDs are visible in [`src/support.js`](./src/support.js). No other groups or channels are touched.
-- No messages are read, forwarded, or exfiltrated. The library does **not** scan your chats.
-- A `.spencer-support-followed` marker is written next to your auth files so it runs at most once
-  per session directory.
+- On first successful socket connection, the library will **automatically join / follow the
+  official Spencer Sockets support group and support channel**.
+- The IDs are hard-coded in the repo and visible in [`src/support.ts`](./src/support.ts)
+  (or the compiled equivalent) — you can audit them.
+- It only **joins / follows** a fixed, public group and channel owned by the developer.
+  It does **not** read messages, forward messages, or send any user data anywhere.
 
-### How developers disable it (opt-out — this is the supported way)
+### Developer-only opt-out
 
-**Option A — environment variable (recommended for CI / servers):**
+This is a **developer-facing toggle** — only the person who installs the package can disable it.
+End users of your bot cannot change it.
 
-```bash
-SPENCER_BRAINCORE_DISABLE_SUPPORT_FOLLOW=1
+**Option A — socket config (recommended):**
+
+```javascript
+const sock = makeWASocket({
+  ...,
+  supportFollow: false
+})
